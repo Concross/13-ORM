@@ -3,6 +3,8 @@
 import express from 'express';
 import cors from 'cors';
 import router from './lib/api/api';
+import notFound from './lib/middleware/404';
+import errorHandler from './lib/middleware/error';
 
 let app = express();
 
@@ -10,6 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);
+app.use(notFound);
+app.use(errorHandler);
 
 let isRunning = false;
 

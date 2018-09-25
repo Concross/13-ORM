@@ -38,6 +38,7 @@
     "mongoose": "^5.2.17",
     "morgan": "^1.9.1",
     "require-dir": "^1.0.0",
+    "superagent": "^4.0.0-beta.5",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

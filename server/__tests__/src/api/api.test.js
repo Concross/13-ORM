@@ -8,7 +8,7 @@ describe('API CRUD operations', () => {
   const basePath = 'http://localhost:3000/api/v1';
 
   beforeAll(() => {
-    mongoose.connect(`mongodb+srv://ccross:Cr0ssl3y@cluster0-iltfa.mongodb.net/myProject`);
+    mongoose.connect(`${process.env.MONGODB_URI}`);
   });
 
   afterAll(() => {

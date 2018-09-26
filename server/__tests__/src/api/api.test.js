@@ -1,20 +1,18 @@
 'use strict';
 
 import superagent from 'superagent';
-import app from '../../../src/app';
+import mongoose, { mongo } from 'mongoose';
 
 describe('API CRUD operations', () => {
 
   const basePath = 'http://localhost:3000/api/v1';
-  const PORT = 3000;
-  let server;
 
   beforeAll(() => {
-    server = app.listen(PORT);
+    mongoose.connect(`mongodb+srv://ccross:Cr0ssl3y@cluster0-iltfa.mongodb.net/myProject`);
   });
 
   afterAll(() => {
-    server.close();
+    mongoose.connection.close();
   });
 
   test('should respond with 200 for a POST request', () => {

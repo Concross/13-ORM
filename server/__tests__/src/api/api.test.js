@@ -7,14 +7,6 @@ describe('API CRUD operations', () => {
 
   const basePath = 'http://localhost:3000/api/v1';
 
-  beforeAll(() => {
-    mongoose.connect(`${process.env.MONGODB_URI}`);
-  });
-
-  afterAll(() => {
-    mongoose.connection.close();
-  });
-
   test('should respond with 200 for a POST request', () => {
     return superagent.post(`${basePath}/customers`)
       .accept('application/json')

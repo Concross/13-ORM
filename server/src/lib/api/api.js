@@ -10,7 +10,9 @@ router.post('/api/v1/:model', (req, res, next) => {
   let document = new req.model(req.body);
 
   document.save()
-    .then(data => { res.status(200).json(data); })
+    .then(data => { 
+      res.status(200).json(data); 
+    })
     .catch(next);
 });
 

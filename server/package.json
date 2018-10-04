@@ -4,8 +4,9 @@
   "description": "Lab for object relational modeling",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "watch": "DEBUG=express:router nodemon index.js",
-    "test": "jest **/*.test.js"
+    "test": "jest"
   },
   "jest": {
     "verbose": true,

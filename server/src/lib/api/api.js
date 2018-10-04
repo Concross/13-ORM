@@ -18,6 +18,7 @@ router.post('/api/v1/:model', (req, res, next) => {
 
 router.get('/api/v1/:model/:id', (req, res, next) => {
 
+
   req.model.findById(req.params.id)
     .then(data => { res.status(200).json(data); })
     .catch(next);
